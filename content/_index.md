@@ -12,10 +12,10 @@ This blog will be used as evidence of learning in a final year portfolio.
 
 | Link | Description | 
 |-----|-----|
-| [University and CS Homepage](content/Computer%20Science/University%20and%20CS%20Homepage.md) | My university "blog" style notes |
-| [Work-based Project Homepage](content/Work-based%20Projects/Work-based%20Project%20Homepage.md) | Notes on work-based projects |
-| [Personal Project Homepage](content/Personal%20Projects/Personal%20Project%20Homepage.md) | Notes on my personal "for fun" projects | 
-| [Languages and Technologies Homepage](content/Languages%20and%20Technologies/Languages%20and%20Technologies%20Homepage.md) | Notes on the different technologies and languages I've learn |
+| [[Computer Science/University and CS Homepage]] | My university "blog" style notes |
+| [[Work-based Projects/Work-based Project Homepage]] | Notes on work-based projects |
+| [[Personal Projects/Personal Project Homepage]] | Notes on my personal "for fun" projects | 
+| [[Languages and Technologies/Languages and Technologies Homepage]] | Notes on the different technologies and languages I've learn |
 
 ## Other Stuff and Interests
 
