@@ -1,27 +1,27 @@
 ---
-title: 🪴 Quartz 3.
-enableToc: false
+title: "The Dyslexic Bioinformatician"
+tags: ["bioinformatics", "blog", "university", "TDB"]
 ---
 
-Host your second brain and [digital garden](https://jzhao.xyz/posts/networked-thought) for free. Quartz features
+## About me
+I'm Damon, a year 4 BSc Data Science (Bioinformatics) apprentice working in the ToLa (Tree of Life Assembly team) at the Wellcome Genome Campus in Hinxton.
 
-1. Extremely fast natural-language [[notes/search]]
-2. Customizable and hackable design based on [Hugo](https://gohugo.io/)
-3. Automatically generated backlinks, link previews, and local graph
-4. Built-in [[notes/CJK + Latex Support (测试) | CJK + Latex Support]] and [[notes/callouts | Admonition-style callouts]]
-5. Support for both Markdown Links and Wikilinks
+This blog will be used as evidence of learning in a final year portfolio.
 
-Check out some of the [amazing gardens that community members](notes/showcase.md) have published with Quartz or read about [why I made Quartz](notes/philosophy.md) to begin with.
+## Contents
 
-## Get Started
-> 📚 Step 1: [Setup your own digital garden using Quartz](notes/setup.md)
+| Link | Description | 
+|-----|-----|
+| [University and CS Homepage](content/Computer%20Science/University%20and%20CS%20Homepage.md) | My university "blog" style notes |
+| [Work-based Project Homepage](content/Work-based%20Projects/Work-based%20Project%20Homepage.md) | Notes on work-based projects |
+| [Personal Project Homepage](content/Personal%20Projects/Personal%20Project%20Homepage.md) | Notes on my personal "for fun" projects | 
+| [Languages and Technologies Homepage](content/Languages%20and%20Technologies/Languages%20and%20Technologies%20Homepage.md) | Notes on the different technologies and languages I've learn |
 
-Returning user? Figure out how to [[notes/updating|update]] your existing Quartz garden.
+## Other Stuff and Interests
 
-If you prefer browsing the contents of this site through a list instead of a graph, you see a list of all [setup-related notes](/tags/setup).
+| Link | Description | 
+|-----|-----|
+| Books | Interesting Books |
 
-### Troubleshooting
-- 🚧 [Troubleshooting and FAQ](notes/troubleshooting.md)
-- 🐛 [Submit an Issue](https://github.com/jackyzha0/quartz/issues)
-- 👀 [Discord Community](https://discord.gg/cRFFHYye7t)
-
+#### How is this hosted?
+This "blog" is written with Obsidian and hosted on GitHub Pages via (Gatsby Garden)[https://github.com/binnyva/gatsby-garden/]
