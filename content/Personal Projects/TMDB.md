@@ -35,7 +35,7 @@ I think the database just needs redesigning, it isn't as optimal as it could be.
 
 ### Issue 2 - Hosting
 
-I could self-host the application on [PiStack](content/Personal%20Projects/PiStack.md), but will there be an issue with scaling as I will be taking this to the Birth Trauma Association, are 4 Pi's enough? 
+I could self-host the application on [[PiStack]], but will there be an issue with scaling as I will be taking this to the Birth Trauma Association, are 4 Pi's enough? 
 
 Security, how would I secure a self-hosted app like this? Is the domain provider able to secure this?
 

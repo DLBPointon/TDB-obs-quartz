@@ -4,10 +4,10 @@ A page for the projects i'm working on or planning to work on.
 
 | Project | Description | Type | Stage |
 |---|---|---|---|
-| [Vault](content/Personal%20Projects/Vault.md) | My Raspberry Pi4 4gb OMV6 based NAS and media server. | Hardware | Completed |
-| [PiStack](content/Personal%20Projects/PiStack.md) | A 4 node, Kubernetes cluster for training. | Hardware | Completed (not in use) |
-| [TMDB](content/Personal%20Projects/TMDB.md) | A Traumatic Media DataBase, needs renaming | Software |Development and Further Planning |
-| [NCBI Taxonomy QuickAdd](content/Personal%20Projects/NCBI%20Taxonomy%20QuickAdd.md) | A QuickAdd for Obsidian to add NCBI taxonomic data as a note | Software |Completed |
+| [[Personal Projects/Vault]] | My Raspberry Pi4 4gb OMV6 based NAS and media server. | Hardware | Completed |
+| [[Personal Projects/PiStack]] | A 4 node, Kubernetes cluster for training. | Hardware | Completed (not in use) |
+| [[Personal Projects/TMDB]] | A Traumatic Media DataBase, needs renaming | Software |Development and Further Planning |
+| [[Personal Projects/NCBI Taxonomy QuickAdd]] | A QuickAdd for Obsidian to add NCBI taxonomic data as a note | Software |Completed |
 
 
 ## Projects in waiting
