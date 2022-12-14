@@ -18,12 +18,12 @@ search:
   operandApiKey: "REPLACE-WITH-YOUR-OPERAND-API-KEY"
   operandIndexId: "REPLACE-WITH-YOUR-OPERAND-INDEX-ID"
 description:
-  Host your second brain and digital garden for free. Quartz features extremely fast full-text search,
-  Wikilink support, backlinks, local graph, tags, and link previews.
+  A website to showcase Personal, Work and University projects. 
+  This will focus on coding projects---such as those I have done in Python, JavaScript and Nextflow---and some hardware projects with Raspberry Pi's and SFF PC's.
 page_title:
-  "🪴 Quartz 3.3"
+  "The Dyslexic Bioinformatician"
 links:
   - link_name: Twitter
-    link: https://twitter.com/_jzhao
+    link: https://twitter.com/DLBPointon
   - link_name: Github
-    link: https://github.com/jackyzha0
+    link: https://github.com/DLBPointon

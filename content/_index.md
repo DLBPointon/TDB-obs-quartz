@@ -24,4 +24,4 @@ This blog will be used as evidence of learning in a final year portfolio.
 | Books | Interesting Books |
 
 #### How is this hosted?
-This "blog" is written with Obsidian and hosted on GitHub Pages via (Gatsby Garden)[https://github.com/binnyva/gatsby-garden/]
+This "blog" is written with Obsidian and hosted on GitHub Pages via (Quartz)[https://github.com/jackyzha0/quartz]
