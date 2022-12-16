@@ -1,7 +1,7 @@
 ---
 title: Forefront of Datascience
 date: 50@16-12-2022
-tags: ["TDB", "workbased", "portfolio"]
+tags: ["TDB", "portfolio"]
 type: ["Learning"]
 ---
 

@@ -1,4 +1,4 @@
-name: Jacky Zhao
+name: Damon-Lee Pointon
 enableToc: true
 openToc: false
 enableLinkPreview: true
@@ -12,13 +12,13 @@ enableContextualBacklinks: true
 enableRecentNotes: false
 enableGitHubEdit: true
 enableMermaid: true
-GitHubLink: https://github.com/jackyzha0/quartz/tree/hugo/content
+GitHubLink: https://github.com/DLBPointon/TDB-obs-quartz
 search:
   enableSemanticSearch: false
   operandApiKey: "REPLACE-WITH-YOUR-OPERAND-API-KEY"
   operandIndexId: "REPLACE-WITH-YOUR-OPERAND-INDEX-ID"
 description:
-  A website to showcase Personal, Work and University projects. 
+  A digital garden website to showcase Personal, Work and University projects. 
   This will focus on coding projects---such as those I have done in Python, JavaScript and Nextflow---and some hardware projects with Raspberry Pi's and SFF PC's.
 page_title:
   "The Dyslexic Bioinformatician"

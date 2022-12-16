@@ -1,5 +1,5 @@
 ---
-tag: workbased
+tag: ['workbased', 'portfolio']
 date: 50@16-12-2022
 type: ['Pipeline', 'Software Development']
 ---
