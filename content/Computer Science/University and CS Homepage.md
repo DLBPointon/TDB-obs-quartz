@@ -1,6 +1,8 @@
 ### Portfolio Pieces
 As a note, any GitHub commits reported as either dp24 or DLBPointon are my work. dp24 is a work based account and DLBPointon is my usual account.
 
+These peices are for use in the Anglia Ruskin University BSc Data Science (Bioinformatics) End Point Assessment.
+
 | Project | Description |
 |---|---|
 | [[SQL vs NoSQL]] | What are the pros and cons of these two methods? |
