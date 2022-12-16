@@ -1,7 +1,21 @@
-Contribution: Nextflow DSL2, Python 3.9, bash
-Working with: ToL
-Topic: Curiosity, Data science
-KSB: B1
+---
+title: Forefront of Datascience
+date: 50@16-12-2022
+tags: ["TDB", "workbased", "portfolio"]
+type: ["Learning"]
+---
+
+Contribution:: Nextflow DSL2, Python 3.9, bash
+
+Working with:: ToL
+
+Topic:: Curiosity, Data science
+
+KSBs:: B1
+
+---
+
+Description:: How I have continued learning and pushing towards new technologies.
 
 Over the past three years as I have become comfortable with Sanger systems I have started to try and push my knowldedge further. I have done this by working on by:
 

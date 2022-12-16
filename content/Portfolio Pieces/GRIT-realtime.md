@@ -1,10 +1,23 @@
-GitHub: [https://github.com/DLBPointon/grt-v5](https://github.com/DLBPointon/grt-v5)
-Contribution: JavaScript, HTML, Python 3.9, bash, Project Management, APIs, Database
-Working with: Solo project reporting to manager
-Topic: Designing new systems to meet organisational goals.
-KSB: K5-3, S6, B1
+---
+title: GRIT-realtime
+date: 50@16-12-2022
+tags: ["TDB", "workbased", "portfolio"]
+type: ["Full-stack Project", "Database-PostreSQL", "Software Development"]
+---
+
+GitHub:: [https://github.com/DLBPointon/grt-v5](https://github.com/DLBPointon/grt-v5)
+
+Contribution:: JavaScript, HTML, Python 3.9, bash, Project Management, APIs, Database
+
+Working with:: Solo project reporting to manager
+
+Topic:: Designing new systems to meet organisational goals.
+
+KSBs:: K5-3, S6, B1
 
 ---
+
+Description:: A Full-stack project to generate graphical summaries of post-curation data
 
 ### The Project
 GRIT-realtime—grt, [https://grit-realtime.tol.sanger.ac.uk/](https://grit-realtime.tol.sanger.ac.uk/)—was originally developed as coursework for the Bioinformatics in the Workplace module. Prior to this project, statistics and graphs would be gathered by: downloading a csv of data, importing this into Microsoft Excel and then manually curating the data (line by line), and, then generating the statistics and graphs required for reports and papers. This resulted in a significant time sink for management and so a more modern and automated solution was required.

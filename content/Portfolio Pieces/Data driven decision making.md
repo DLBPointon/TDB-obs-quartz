@@ -1,7 +1,21 @@
+---
+title: Data driven decision making
+date: 50@16-12-2022
+tags: ["TDB", "workbased", "portfolio"]
+type: ["Learning"]
+---
+
 Contribution: Nextflow DSL2, Python 3.9, bash
+
 Working with: ToL
+
 Topic: Collaborative Projects, Decision making, Data science
+
 KSB: K3-3
+
+---
+
+Description:: How data has effected how a project has gone forward.
 
 Through my work in DTOL, data driven decision making has been ubiquitous. Through Tree Of Life Research and Development (ToL RnD) meetings we see the effects of data driven decision making on:
 

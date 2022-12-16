@@ -1,12 +1,23 @@
+---
+tag: ["workbased", "portfolio"]
+date: 50@16-12-2022
+type: ['Pipeline', 'Software Development']
+---
 
-GitHub: [https://github.com/AlanTracey99/TeloSearch](https://github.com/AlanTracey99/TeloSearch)
-Contribution: Nextflow DSL2, Python 3.9, bash
-Working with: AT (colleague at Sanger)
-Topic: Collaborative Project, Scaling a project to meet organisational goals
-KSB:
+
+GitHub:: [https://github.com/AlanTracey99/TeloSearch](https://github.com/AlanTracey99/TeloSearch)
+
+Contribution:: Nextflow DSL2, Python 3.9, bash
+
+Working with:: AT (colleague at Sanger)
+
+Topic:: Collaborative Project, Scaling a project to meet organisational goals
+
+KSBs::
 
 ---
 
+Description:: A pipeline to find putative telomeric sequence in good quality scaffolded assemblies
 
 ### The Project
 The TeloSearch project was originally started by a member of GRIT (AT) who had written a python script to pull putative telomeres from a scaffolded genomic assembly. This would be a very useful tool in the curation team but would need scaling up in order to be run across the hundreds of genomic assemblies expected to move through the ToL genome engine on a weekly basis.
