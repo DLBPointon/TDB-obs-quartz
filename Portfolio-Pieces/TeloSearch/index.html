@@ -1,4 +1,4 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=description content="GitHub: https://github.com/AlanTracey99/TeloSearch Contribution: Nextflow DSL2, Python 3.9, bash Working with: Alan Tracey (AT) Topic: Collaborative Project, Scaling a project to meet organisational goals KSB:"><title>The Dyslexic Bioinformatician</title><meta name=viewport content="width=device-width,initial-scale=1"><link rel="shortcut icon" type=image/png href=https://dlbpointon.github.io/TDB-obs-quartz//icon.png><link href=https://dlbpointon.github.io/TDB-obs-quartz/styles.706bb6073ba85d26809f9096dae23a6b.min.css rel=stylesheet><link href=https://dlbpointon.github.io/TDB-obs-quartz/styles/_light_syntax.86a48a52faebeaaf42158b72922b1c90.min.css rel=stylesheet id=theme-link><script src=https://dlbpointon.github.io/TDB-obs-quartz/js/darkmode.cfcd25279560061512e85b624dd83073.min.js></script>
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=description content="GitHub: https://github.com/AlanTracey99/TeloSearch Contribution: Nextflow DSL2, Python 3.9, bash Working with: AT (colleague at Sanger) Topic: Collaborative Project, Scaling a project to meet organisational goals KSB:"><title>The Dyslexic Bioinformatician</title><meta name=viewport content="width=device-width,initial-scale=1"><link rel="shortcut icon" type=image/png href=https://dlbpointon.github.io/TDB-obs-quartz//icon.png><link href=https://dlbpointon.github.io/TDB-obs-quartz/styles.706bb6073ba85d26809f9096dae23a6b.min.css rel=stylesheet><link href=https://dlbpointon.github.io/TDB-obs-quartz/styles/_light_syntax.86a48a52faebeaaf42158b72922b1c90.min.css rel=stylesheet id=theme-link><script src=https://dlbpointon.github.io/TDB-obs-quartz/js/darkmode.cfcd25279560061512e85b624dd83073.min.js></script>
 <script src=https://dlbpointon.github.io/TDB-obs-quartz/js/util.5e39932758f9ecaf45fd54506ed61416.min.js></script>
 <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css integrity=sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js integrity=sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx crossorigin=anonymous></script>
 <script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js integrity=sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR crossorigin=anonymous></script>
@@ -9,16 +9,218 @@
 <script src=https://dlbpointon.github.io/TDB-obs-quartz/js/code-title.b35124ad8db0ba37162b886afb711cbc.min.js></script>
 <script src=https://dlbpointon.github.io/TDB-obs-quartz/js/clipboard.c20857734e53a3fb733b7443879efa61.min.js></script>
 <script src=https://dlbpointon.github.io/TDB-obs-quartz/js/callouts.7723cac461d613d118ee8bb8216b9838.min.js></script>
-<script>const SEARCH_ENABLED=!1,LATEX_ENABLED=!0,PRODUCTION=!0,BASE_URL="https://dlbpointon.github.io/TDB-obs-quartz/",fetchData=Promise.all([fetch("https://dlbpointon.github.io/TDB-obs-quartz/indices/linkIndex.1958e341b96f29398d3c56bdca4dda21.min.json").then(e=>e.json()).then(e=>({index:e.index,links:e.links})),fetch("https://dlbpointon.github.io/TDB-obs-quartz/indices/contentIndex.3f92b20a7eb70a7af9a0a58e56095769.min.json").then(e=>e.json())]).then(([{index:e,links:t},n])=>({index:e,links:t,content:n})),render=()=>{const e=new URL(BASE_URL),t=e.pathname,n=window.location.pathname,s=t==n;addCopyButtons(),addTitleToCodeBlocks(),addCollapsibleCallouts(),initPopover("https://dlbpointon.github.io/TDB-obs-quartz",!0);const o=document.getElementById("footer");if(o){const e=document.getElementById("graph-container");if(!e)return requestAnimationFrame(render);e.textContent="";const t=s&&!1;drawGraph("https://dlbpointon.github.io/TDB-obs-quartz",t,[{"/moc":"#4388cc"}],t?{centerForce:1,depth:-1,enableDrag:!0,enableLegend:!1,enableZoom:!0,fontSize:.5,linkDistance:1,opacityScale:3,repelForce:1,scale:1.4}:{centerForce:1,depth:1,enableDrag:!0,enableLegend:!1,enableZoom:!0,fontSize:.6,linkDistance:1,opacityScale:3,repelForce:2,scale:1.2})}var i=document.getElementsByClassName("mermaid");i.length>0&&import("https://unpkg.com/mermaid@9/dist/mermaid.esm.min.mjs").then(e=>{e.default.init()})},init=(e=document)=>{addCopyButtons(),addTitleToCodeBlocks(),renderMathInElement(e.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1}],macros:{'’':"'"},throwOnError:!1})}</script><script type=module>
+<script>const SEARCH_ENABLED=!1,LATEX_ENABLED=!0,PRODUCTION=!0,BASE_URL="https://dlbpointon.github.io/TDB-obs-quartz/",fetchData=Promise.all([fetch("https://dlbpointon.github.io/TDB-obs-quartz/indices/linkIndex.1958e341b96f29398d3c56bdca4dda21.min.json").then(e=>e.json()).then(e=>({index:e.index,links:e.links})),fetch("https://dlbpointon.github.io/TDB-obs-quartz/indices/contentIndex.6e44d95a796962c4e65beaa956a251f4.min.json").then(e=>e.json())]).then(([{index:e,links:t},n])=>({index:e,links:t,content:n})),render=()=>{const e=new URL(BASE_URL),t=e.pathname,n=window.location.pathname,s=t==n;addCopyButtons(),addTitleToCodeBlocks(),addCollapsibleCallouts(),initPopover("https://dlbpointon.github.io/TDB-obs-quartz",!0);const o=document.getElementById("footer");if(o){const e=document.getElementById("graph-container");if(!e)return requestAnimationFrame(render);e.textContent="";const t=s&&!1;drawGraph("https://dlbpointon.github.io/TDB-obs-quartz",t,[{"/moc":"#4388cc"}],t?{centerForce:1,depth:-1,enableDrag:!0,enableLegend:!1,enableZoom:!0,fontSize:.5,linkDistance:1,opacityScale:3,repelForce:1,scale:1.4}:{centerForce:1,depth:1,enableDrag:!0,enableLegend:!1,enableZoom:!0,fontSize:.6,linkDistance:1,opacityScale:3,repelForce:2,scale:1.2})}var i=document.getElementsByClassName("mermaid");i.length>0&&import("https://unpkg.com/mermaid@9/dist/mermaid.esm.min.mjs").then(e=>{e.default.init()})},init=(e=document)=>{addCopyButtons(),addTitleToCodeBlocks(),renderMathInElement(e.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1}],macros:{'’':"'"},throwOnError:!1})}</script><script type=module>
     import { attachSPARouting } from "https:\/\/dlbpointon.github.io\/TDB-obs-quartz\/js\/router.9d4974281069e9ebb189f642ae1e3ca2.min.js"
     attachSPARouting(init, render)
   </script></head><body><div id=search-container><div id=search-space><input autocomplete=off id=search-bar name=search type=text aria-label=Search placeholder="Search for something..."><div id=results-container></div></div></div><script src=https://cdn.jsdelivr.net/npm/flexsearch@0.7.21/dist/flexsearch.bundle.js integrity="sha256-i3A0NZGkhsKjVMzFxv3ksk0DZh3aXqu0l49Bbh0MdjE=" crossorigin=anonymous defer></script>
 <script defer src=https://dlbpointon.github.io/TDB-obs-quartz/js/full-text-search.51f0b1753e9b30839d053f8a98cc20d1.min.js></script><div class=singlePage><header><h1 id=page-title><a href=https://dlbpointon.github.io/TDB-obs-quartz/>The Dyslexic Bioinformatician</a></h1><div class=spacer></div><div id=search-icon><p>Search</p><svg tabindex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search Icon</title><desc id="desc">Icon to open search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"/><circle cx="8" cy="8" r="7"/></g></svg></div><div class=darkmode><input class=toggle id=darkmode-toggle type=checkbox tabindex=-1>
 <label id=toggle-label-light for=darkmode-toggle tabindex=-1><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="dayIcon" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35"><title>Light Mode</title><path d="M6 17.5C6 16.672 5.328 16 4.5 16h-3C.672 16 0 16.672.0 17.5S.672 19 1.5 19h3C5.328 19 6 18.328 6 17.5zM7.5 26c-.414.0-.789.168-1.061.439l-2 2C4.168 28.711 4 29.086 4 29.5 4 30.328 4.671 31 5.5 31c.414.0.789-.168 1.06-.44l2-2C8.832 28.289 9 27.914 9 27.5 9 26.672 8.329 26 7.5 26zm10-20C18.329 6 19 5.328 19 4.5v-3C19 .672 18.329.0 17.5.0S16 .672 16 1.5v3C16 5.328 16.671 6 17.5 6zm10 3c.414.0.789-.168 1.06-.439l2-2C30.832 6.289 31 5.914 31 5.5 31 4.672 30.329 4 29.5 4c-.414.0-.789.168-1.061.44l-2 2C26.168 6.711 26 7.086 26 7.5 26 8.328 26.671 9 27.5 9zM6.439 8.561C6.711 8.832 7.086 9 7.5 9 8.328 9 9 8.328 9 7.5c0-.414-.168-.789-.439-1.061l-2-2C6.289 4.168 5.914 4 5.5 4 4.672 4 4 4.672 4 5.5c0 .414.168.789.439 1.06l2 2.001zM33.5 16h-3c-.828.0-1.5.672-1.5 1.5s.672 1.5 1.5 1.5h3c.828.0 1.5-.672 1.5-1.5S34.328 16 33.5 16zM28.561 26.439C28.289 26.168 27.914 26 27.5 26c-.828.0-1.5.672-1.5 1.5.0.414.168.789.439 1.06l2 2C28.711 30.832 29.086 31 29.5 31c.828.0 1.5-.672 1.5-1.5.0-.414-.168-.789-.439-1.061l-2-2zM17.5 29c-.829.0-1.5.672-1.5 1.5v3c0 .828.671 1.5 1.5 1.5s1.5-.672 1.5-1.5v-3C19 29.672 18.329 29 17.5 29zm0-22C11.71 7 7 11.71 7 17.5S11.71 28 17.5 28 28 23.29 28 17.5 23.29 7 17.5 7zm0 18c-4.136.0-7.5-3.364-7.5-7.5s3.364-7.5 7.5-7.5 7.5 3.364 7.5 7.5S21.636 25 17.5 25z"/></svg></label><label id=toggle-label-dark for=darkmode-toggle tabindex=-1><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="nightIcon" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'"><title>Dark Mode</title><path d="M96.76 66.458c-.853-.852-2.15-1.064-3.23-.534-6.063 2.991-12.858 4.571-19.655 4.571C62.022 70.495 50.88 65.88 42.5 57.5 29.043 44.043 25.658 23.536 34.076 6.47c.532-1.08.318-2.379-.534-3.23-.851-.852-2.15-1.064-3.23-.534-4.918 2.427-9.375 5.619-13.246 9.491-9.447 9.447-14.65 22.008-14.65 35.369.0 13.36 5.203 25.921 14.65 35.368s22.008 14.65 35.368 14.65c13.361.0 25.921-5.203 35.369-14.65 3.872-3.871 7.064-8.328 9.491-13.246C97.826 68.608 97.611 67.309 96.76 66.458z"/></svg></label></div></header><article><p class=meta>Last updated
-Dec 15, 2022
-<a href=https://github.com/jackyzha0/quartz/tree/hugo/content/Portfolio%20Pieces/TeloSearch.md rel=noopener>Edit Source</a></p><ul class=tags></ul><aside class=mainTOC><details><summary>Table of Contents</summary><nav id=TableOfContents><ol><li><ol><li><a href=#the-project>The Project</a></li><li><a href=#my-contribution>My Contribution</a></li><li><a href=#future-work>Future Work</a></li></ol></li></ol></nav></details></aside><p>GitHub:
+Dec 16, 2022
+<a href=https://github.com/jackyzha0/quartz/tree/hugo/content/Portfolio%20Pieces/TeloSearch.md rel=noopener>Edit Source</a></p><ul class=tags></ul><aside class=mainTOC><details><summary>Table of Contents</summary><nav id=TableOfContents><ol><li><ol><li><a href=#the-project>The Project</a></li><li><a href=#my-contribution>My Contribution</a></li><li><a href=#future-work>Future Work</a></li><li><a href=#evidence-of-team-work>Evidence of Team work</a></li></ol></li></ol></nav></details></aside><p>GitHub:
 <a href=https://github.com/AlanTracey99/TeloSearch rel=noopener>https://github.com/AlanTracey99/TeloSearch</a>
 Contribution: Nextflow DSL2, Python 3.9, bash
-Working with: Alan Tracey (AT)
+Working with: AT (colleague at Sanger)
 Topic: Collaborative Project, Scaling a project to meet organisational goals
-KSB:</p><hr><a href=#the-project><h3 id=the-project><span class=hanchor arialabel=Anchor># </span>The Project</h3></a><p>The TeloSearch project was originally started by a member of GRIT (AT) who had written a python script to pull putative telomeres from a scaffolded genomic assembly. This would be a very useful tool in the curation team but would need scaling up in order to be run across the hundreds of genomic assemblies expected to move through the ToL genome engine on a weekly basis.</p><p>This project involved a significant amount of collaboration between the two of us, talking through what was required for converting a singular python script into a automatic and horizontally scalable Nextflow DSL2. This has involved creating a series of scripts—which were not originally part of the project—that handles the input, massages multiple intermediary files, creates a summary output file and takes the best putative telomere and enters it into the Jira Ticket for that assembly.</p><a href=#my-contribution><h3 id=my-contribution><span class=hanchor arialabel=Anchor># </span>My Contribution</h3></a><p>My contributions to the project consisted of writing a significant amount of the Nextflow DSL2 Pipeline as this was also being used as a way to train AT on how Nextflow works, the correct syntax as well as how to modularise a pipeline.</p><p>As we had very similar Python skills, I also helped in writing of the list comprehensions and lambda functions used in the main TeloSearch Python scripts.</p><p>A number of the projects I have written whilst at Sanger have involved using the Jira-Python module, because of this I also suggested we write a module to take the final output and insert this into the ticket related to the input genome.</p><a href=#future-work><h3 id=future-work><span class=hanchor arialabel=Anchor># </span>Future Work</h3></a><p>As part of <a class="internal-link broken">TreeVal</a> this project will be updated, as some functions related to identifying putative sequences are too broad, and then used as part of the standard TreeVal pipeline. This will allow us to collect a database of telomeric sequences that have yet been seqeunces and further improve curation outcomes.</p></article><hr><div class=page-end id=footer><div class=backlinks-container><h3>Backlinks</h3><ul class=backlinks><li><a href=/TDB-obs-quartz/Computer-Science/University-and-CS-Homepage/ data-ctx="Portfolio Pieces/TeloSearch" data-src=/Computer-Science/University-and-CS-Homepage class=internal-link></a></li></ul></div><div><script src=https://cdn.jsdelivr.net/npm/d3@6.7.0/dist/d3.min.js integrity="sha256-+7jaYCp29O1JusNWHaYtgUn6EhuP0VaFuswhNV06MyI=" crossorigin=anonymous></script><h3>Interactive Graph</h3><div id=graph-container></div><style>:root{--g-node:var(--secondary);--g-node-active:var(--primary);--g-node-inactive:var(--visited);--g-link:var(--outlinegray);--g-link-active:#5a7282}</style><script src=https://dlbpointon.github.io/TDB-obs-quartz/js/graph.abd4bc2af3869a96524d7d23b76152c7.js></script></div></div><div id=contact_buttons><footer><p>Made by Jacky Zhao using <a href=https://github.com/jackyzha0/quartz>Quartz</a>, © 2022</p><ul><li><a href=https://dlbpointon.github.io/TDB-obs-quartz/>Home</a></li><li><a href=https://twitter.com/DLBPointon>Twitter</a></li><li><a href=https://github.com/DLBPointon>Github</a></li></ul></footer></div></div></body></html>
+KSB:</p><hr><a href=#the-project><h3 id=the-project><span class=hanchor arialabel=Anchor># </span>The Project</h3></a><p>The TeloSearch project was originally started by a member of GRIT (AT) who had written a python script to pull putative telomeres from a scaffolded genomic assembly. This would be a very useful tool in the curation team but would need scaling up in order to be run across the hundreds of genomic assemblies expected to move through the ToL genome engine on a weekly basis.</p><p>This project involved a significant amount of collaboration between the two of us, talking through what was required for converting a singular python script into a automatic and horizontally scalable Nextflow DSL2. This has involved creating a series of scripts—which were not originally part of the project—that handles the input, massages multiple intermediary files, creates a summary output file and takes the best putative telomere and enters it into the Jira Ticket for that assembly.</p><a href=#my-contribution><h3 id=my-contribution><span class=hanchor arialabel=Anchor># </span>My Contribution</h3></a><p>My contributions to the project consisted of writing a significant amount of the Nextflow DSL2 Pipeline as this was also being used as a way to train AT on how Nextflow works, the correct syntax as well as how to modularise a pipeline.</p><p>As we had very similar Python skills, I also helped in writing of the list comprehensions and lambda functions used in the main TeloSearch Python scripts.</p><p>A number of the projects I have written whilst at Sanger have involved using the Jira-Python module, because of this I also suggested we write a module to take the final output and insert this into the ticket related to the input genome.</p><a href=#future-work><h3 id=future-work><span class=hanchor arialabel=Anchor># </span>Future Work</h3></a><p>As part of <a class="internal-link broken">TreeVal</a> this project will be updated, as some functions related to identifying putative sequences are too broad, and then used as part of the standard TreeVal pipeline. This will allow us to collect a database of telomeric sequences that have yet been seqeunces and further improve curation outcomes.</p><p>Some parts that I could update significantly include the <code>jira_telo_push.py</code> script (found
+<a href=https://github.com/AlanTracey99/TeloSearch/blob/main/scripts/jira_telo_push.py rel=noopener>here</a>), which would benfit from the use functional programming. This would reduce the amount of code and simultaneously making it easier to read.</p><p>A simple example is the <code>get_length</code> funtion, this could be changed as below:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=c1># This code block can be run locally if the repo is downloaded and opened in Obsidian with the jupyter plugin installed and the python code block converted into a jupyter code block.</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>putative_telo</span> <span class=o>=</span> <span class=s1>&#39;ATTATTATT&#39;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Current implementation</span>
+</span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>get_length_current</span><span class=p>(</span><span class=n>motif</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>	<span class=s2>&#34;&#34;&#34;
+</span></span></span><span class=line><span class=cl><span class=s2>	Function returns the lengthe of a motif. !!! indicated no telo so
+</span></span></span><span class=line><span class=cl><span class=s2>	returns 0.
+</span></span></span><span class=line><span class=cl><span class=s2>	&#34;&#34;&#34;</span>
+</span></span><span class=line><span class=cl>	<span class=k>if</span> <span class=n>motif</span> <span class=o>==</span> <span class=s1>&#39;!!!&#39;</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>		<span class=n>motif_value</span> <span class=o>=</span> <span class=mi>0</span>
+</span></span><span class=line><span class=cl>	<span class=k>else</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>	<span class=n>motif_value</span> <span class=o>=</span> <span class=nb>len</span><span class=p>(</span><span class=n>motif</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>	<span class=k>return</span> <span class=nb>int</span><span class=p>(</span><span class=n>motif_value</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Proposed implementation</span>
+</span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>get_length_proposed</span><span class=p>(</span><span class=n>motif</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>	<span class=s2>&#34;&#34;&#34;
+</span></span></span><span class=line><span class=cl><span class=s2>	Function returns the lengthe of a motif. !!! indicated no telo so
+</span></span></span><span class=line><span class=cl><span class=s2>	returns 0.
+</span></span></span><span class=line><span class=cl><span class=s2>	&#34;&#34;&#34;</span>
+</span></span><span class=line><span class=cl>	<span class=k>return</span> <span class=nb>int</span><span class=p>(</span><span class=n>motif_value</span><span class=p>)</span> <span class=k>if</span> <span class=n>motif</span> <span class=o>==</span> <span class=s1>&#39;!!!&#39;</span> <span class=k>else</span> <span class=nb>len</span><span class=p>(</span><span class=n>motif</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>get_length_current</span><span class=p>(</span><span class=n>putative_telo</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=c1># 9</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>get_length_proposed</span><span class=p>(</span><span class=n>putative_telo</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=c1># 9</span>
+</span></span></code></pre></td></tr></table></div></div><a href=#evidence-of-team-work><h3 id=evidence-of-team-work><span class=hanchor arialabel=Anchor># </span>Evidence of Team work</h3></a><p>Some of this evidence includes where I am teaching AT how to use GitHub and teaching them the Nextflow DSL2 syntax.</p><a href=#evidence-1><h5 id=evidence-1><span class=hanchor arialabel=Anchor># </span>Evidence 1</h5></a><p>On setting up and using GitHub - Slack Chat.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-markdown data-lang=markdown><span class=line><span class=cl>DamonLBP
+</span></span><span class=line><span class=cl>Oh yes, wrong word at the wrong time then say goodbye to your work. This is why you almost can&#39;t push too often.
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>That way you can revert any damaging changes you do
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>AT
+</span></span><span class=line><span class=cl>you almost want push running every 30 seconds in the background...
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>DamonLBP  
+</span></span><span class=line><span class=cl>Yep, but then pushing code to main which doesn&#39;t work is bad practise and just as likely to annoy. So branches are a safe space.
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>AT
+</span></span><span class=line><span class=cl>ok,  I need to remember that and get used to working in branches.  Would you say each branch should have a task associated with it and then when that task is done you pull it back into main?
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>DamonLBP  
+</span></span><span class=line><span class=cl>Yes precisely.
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>This is also where using GitHub Issues and the integrated KanBan board can be useful
+</span></span></code></pre></td></tr></table></div></div><a href=#evidence-2><h5 id=evidence-2><span class=hanchor arialabel=Anchor># </span>Evidence 2</h5></a><p>On reporting updates I have made and a discussion on further changes.</p><p>Part 1 - Slack Chat</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-markdown data-lang=markdown><span class=line><span class=cl>DamonLBP  
+</span></span><span class=line><span class=cl>Morning Alan,  
+</span></span><span class=line><span class=cl>There&#39;s not much i&#39;ll be able to do today due to university stuff. But i thought i&#39;d let you know that the JIRA integration works... kind of. Running the script outside of the pipeline works and posts to GRIT-280 but inside the pipeline it fails due to &#39;Being outside of the Sanger Network&#39; So this maybe a systems issue. I&#39;ve detailed what I can here: [<span class=nt>https://github.com/AlanTracey99/TeloSearch/issues/2</span>](<span class=na>https://github.com/AlanTracey99/TeloSearch/issues/2</span>)It wouldn&#39;t be alot of work to make my script take the cannon and noncannon files and spit out what it thinks is best and run it separately but it would be a pain.
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>AT
+</span></span><span class=line><span class=cl>Thanks Damon - sounds like progress.  Happy to chat about the best way to utilise the results if you want at some point...
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>DamonLBP
+</span></span><span class=line><span class=cl>It is done, the pipeline now passes to JIRA. The python script needed to pass the JIRA request through the sanger cache system in order to connect.
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>AT 
+</span></span><span class=line><span class=cl>Nice!
+</span></span><span class=line><span class=cl>Are there any telo-populated tickets?
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>DamonLBP
+</span></span><span class=line><span class=cl>I did GRIT-470, you can see where the changes occurred at the bottom of the history tab. I&#39;m changing it so the length is actually the length of the sequence, currently measuring the wrong bit of the report.
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Part 2 (see below) was attached.
+</span></span></code></pre></td></tr></table></div></div><p>Part 2 - Screenshot of the incorrect upload to JIRA
+<a class="internal-link broken">evidence_of_jira_integration_telosearch.png</a></p><p>Part 3 - Slack Chat (following on from Part 2)</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-markdown data-lang=markdown><span class=line><span class=cl>AT
+</span></span><span class=line><span class=cl>only thing I don&#39;t like is &#39;CAN&#39; looks like DNA sequence, eg CA[*]
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>DamonLBP  
+</span></span><span class=line><span class=cl>That is a fair point
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>AT
+</span></span><span class=line><span class=cl>not sure why it say length 3 - but I think from what you said above that you&#39;re fixing that
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>DamonLBP  
+</span></span><span class=line><span class=cl>I put an argument in the wrong place, so it was measuring CAN. That&#39;s fixed now, although i&#39;ve managed to kill my connection to the farm.
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>AT
+</span></span><span class=line><span class=cl>ok.  Just so you know, Bethan has a hymenopteran with 2 motifs, one length 9 and one length 5 - how will you deal with this?
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>DamonLBP  
+</span></span><span class=line><span class=cl>At the minute, it won&#39;t. It is taking the top result and using that.  
+</span></span><span class=line><span class=cl>Need to sort out the logic for which to pick
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>AT 
+</span></span><span class=line><span class=cl>I think we need to be able to pick and deal with multiple motifs
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>It can be the biological reality
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>DamonLBP  
+</span></span><span class=line><span class=cl>Yes i thought so, but at the time I was just focused on just getting the Jira posting to work.
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>What if I were to change CAN and NONCAN to ! and ? respectively. I think those would make sense and also makes clear what sequence to use. It&#39;ll just make it easier for me to parse it for downstream.
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>AT
+</span></span><span class=line><span class=cl>sounds ok - you may want to send an explanation to the curators at some point?
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>DamonLBP
+</span></span><span class=line><span class=cl>Sure as soon as it hits production. I&#39;m writing it up on the README too.
+</span></span></code></pre></td></tr></table></div></div></article><hr><div class=page-end id=footer><div class=backlinks-container><h3>Backlinks</h3><ul class=backlinks><li><a href=/TDB-obs-quartz/Computer-Science/University-and-CS-Homepage/ data-ctx="Portfolio Pieces/TeloSearch" data-src=/Computer-Science/University-and-CS-Homepage class=internal-link></a></li></ul></div><div><script src=https://cdn.jsdelivr.net/npm/d3@6.7.0/dist/d3.min.js integrity="sha256-+7jaYCp29O1JusNWHaYtgUn6EhuP0VaFuswhNV06MyI=" crossorigin=anonymous></script><h3>Interactive Graph</h3><div id=graph-container></div><style>:root{--g-node:var(--secondary);--g-node-active:var(--primary);--g-node-inactive:var(--visited);--g-link:var(--outlinegray);--g-link-active:#5a7282}</style><script src=https://dlbpointon.github.io/TDB-obs-quartz/js/graph.abd4bc2af3869a96524d7d23b76152c7.js></script></div></div><div id=contact_buttons><footer><p>Made by Jacky Zhao using <a href=https://github.com/jackyzha0/quartz>Quartz</a>, © 2022</p><ul><li><a href=https://dlbpointon.github.io/TDB-obs-quartz/>Home</a></li><li><a href=https://twitter.com/DLBPointon>Twitter</a></li><li><a href=https://github.com/DLBPointon>Github</a></li></ul></footer></div></div></body></html>
