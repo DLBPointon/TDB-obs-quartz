@@ -13,7 +13,7 @@ Working with:: AT (colleague at Sanger)
 
 Topic:: Collaborative Project, Scaling a project to meet organisational goals
 
-KSBs::
+KSBs:: S6, S7, B1, B3, B4
 
 ---
 
@@ -32,7 +32,7 @@ As we had very similar Python skills, I also helped in writing of the list compr
 A number of the projects I have written whilst at Sanger have involved using the Jira-Python module, because of this I also suggested we write a module to take the final output and insert this into the ticket related to the input genome.
 
 ### Future Work
-As part of [[TreeVal]] this project will be updated, as some functions related to identifying putative sequences are too broad, and then used as part of the standard TreeVal pipeline. This will allow us to collect a database of telomeric sequences that have yet been seqeunces and further improve curation outcomes.
+As part of [[TreeVal - md team and tracking time]] this project will be updated, as some functions related to identifying putative sequences are too broad, and then used as part of the standard TreeVal pipeline. This will allow us to collect a database of telomeric sequences that have yet been seqeunces and further improve curation outcomes.
 
 Some parts that I could update significantly include the `jira_telo_push.py` script (found [here](https://github.com/AlanTracey99/TeloSearch/blob/main/scripts/jira_telo_push.py)), which would benfit from the use functional programming. This would reduce the amount of code and simultaneously making it easier to read.
 

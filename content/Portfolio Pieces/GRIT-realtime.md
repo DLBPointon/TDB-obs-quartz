@@ -13,7 +13,7 @@ Working with:: Solo project reporting to manager
 
 Topic:: Designing new systems to meet organisational goals.
 
-KSBs:: K5-3, S6, B1
+KSBs:: K5-3, S6, B1, K3-3, B1, B6
 
 ---
 
@@ -35,7 +35,10 @@ Figure 2: The main page of the GRIT-realtime site, showcasing the graphs with dr
 Currently, grt is used for curation poster presentations (both the front-end and the API have been used for data) as well as for the current genome note pipeline (as by default, grt parses much of the data that the genome note writer needs to complete a note). This data, as it is real-world post-curation data, can be used to imply the relative difficulty of genomic curation of the clades (see figure 3, where the Boxplot shows how many changes are made to an assembly of any clade), currently as some clades a represented by a low number of genomes there maybe an inherent sample bias towards the easier to assemble and curate (currently, those which are poorly assembled and non-curatable are re-submitted for sequencing and are not included in grt).
 
 ### My Contribution
+I built the entirty of grt, originally as coursework for the Bioinformatics in the Workplace. The original was based in R for display in RShiny and is still hosted [here](https://grit-realtime.shinyapps.io/scripts/), the loading time alone (around 5 minutes) required a different approach and so the aforementioned containerised version was produced. This was also during a time where Sanger-IT were encouraging people to move away from RShiny due to the amount of time taken to compile a Shiny Container as well as the poor scaling and porformance of the framework.
 
 ### Future Work
+Sanger contains a group that soley work on platforms, their role over the past 3 years has been creating a ReactJS based framework for sample management throught out DTOL. As that project has grown, so have the ambitions for it. It is currently being rolled out company wide and is now based on a Sanger specific framework in which a number of projects will be converted too. This will, however, require learning ReactJS so will represent a significant learning curve from vanilla JavaScript.
 
-### Evidence of Team work
+I will eventually be commiting grt over to this new platform, where it will be further expanded on by including [[TeloSearch]] results from Jira as well as BUSCO from [TolQC](https://tolqc.cog.sanger.ac.uk/index.html) (one of the site) and/or [[TreeVal - md team and tracking time]] to better act as a post-curation summary site.
+
