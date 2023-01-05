@@ -2,12 +2,16 @@ A page for the projects i'm working on or planning to work on.
 
 ## In Active Development
 
-| Project | Description | Type | Stage |
-|---|---|---|---|
-| [[Vault]] | My Raspberry Pi4 4gb OMV6 based NAS and media server. | Hardware | Completed |
-| [[PiStack]] | A 4 node, Kubernetes cluster for training. | Hardware | Completed (not in use) |
-| [[TMDB]] | A Traumatic Media DataBase, needs renaming | Software |Development and Further Planning |
-| [[NCBI Taxonomy QuickAdd]] | A QuickAdd for Obsidian to add NCBI taxonomic data as a note | Software |Completed |
+| File                                                                                                            | Date          | Description                                                                                                                                                                  | Type                                                                                                    | Status                           |
+| --------------------------------------------------------------------------------------------------------------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | -------------------------------- |
+| [[Personal Projects/Better metadata parsing - Jellyfin-youtube.md\|Better metadata parsing - Jellyfin-youtube]] | 01@04-38-2023 | A simple python script to parse filenames or a info.json to improve file organisation of videos downloaded for educational use.                                              | <ul><li>Software</li></ul>                                                                              | Waiting on Time                  |
+| [[Personal Projects/NCBI Taxonomy QuickAdd.md\|NCBI Taxonomy QuickAdd]]                                         | NA            | An Obsidian Plugin for NCBI taxonomy data.                                                                                                                                   | <ul><li>Software</li></ul>                                                                              | Completed                        |
+| [[Personal Projects/PiStack.md\|PiStack]]                                                                       | NA            | A 4 node Kubernetes Cluster.                                                                                                                                                 | <ul><li>Hardware</li><li>Software</li><li>Learning</li></ul>                                            | Completed (Not in Use)           |
+| [[Personal Projects/PuffCrust.md\|PuffCrust]]                                                                   | NA            | My [[Vault]]/ShortCrust version 2.                                                                                                                                           | <ul><li>Hardware</li><li>Software</li><li>Learning</li></ul>                                            | Waiting on Time                  |
+| [[Personal Projects/TMDB.md\|TMDB]]                                                                             | NA            | The Traumatic Media DataBase is a project I started in 2021 in order to provide a simple way to search for media which may have a scenes that could be considered traumatic. | <ul><li>Software</li><li>Dockerisation</li><li>Learning</li><li>Networking</li><li>Databasing</li></ul> | Needs more Research and Dev Time |
+| [[Personal Projects/Vault.md\|Vault]]                                                                           | NA            | A Raspberry Pi4 4gb based NAS using OMV6 and Docker, that I also call ShortCrust.                                                                                            | <ul><li>Hardware</li><li>Software</li><li>Containerisation</li><li>Networking</li></ul>                 | Completed                        |
+
+
 
 
 ## Projects in waiting

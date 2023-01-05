@@ -1,4 +1,12 @@
-A Raspberry Pi4 4gb based NAS using OMV6 and Docker, that I also call ShortCrust.
+---
+project: Vault
+date_started: NA
+status: Completed
+tags: ["TDB", "personal"]
+type: ["Hardware", "Software", "Containerisation", "Networking"]
+---
+
+Description:: A Raspberry Pi4 4gb based NAS using OMV6 and Docker, that I also call ShortCrust.
 
 The number of containers now running on this has occasionally led to some major slow downs and website freezing. Because of this and as I have a number of computer spare parts now, i think i'll just update the entire infrastructure of this project [[PuffCrust]]. As an intermediary step I have added a portainer agent (A Raspberry Pi 4 called Docker-1, D1) to expand the docker capabilities of the Vault, this is now effectively a 1x head and 1x node cluster.
 

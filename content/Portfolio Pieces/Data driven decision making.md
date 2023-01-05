@@ -11,7 +11,7 @@ Working with: ToL
 
 Topic: Collaborative Projects, Decision making, Data science
 
-KSB: K3-3
+KSBs:: K3-3
 
 ---
 
@@ -24,7 +24,8 @@ Through my work in DTOL, data driven decision making has been ubiquitous. Throug
 - The Faculty Research groups in where they must decide on the best ways in which to massage their data to produce informative results. The Merian Unit Analysis (not yet published), which is being added to the [[TreeVal - md team and tracking time]] Project, needed iterative refinement to best identify putative ancestral units. This will go on to be used in [[TreeVal - md team and tracking time]] to better improve both curation and Lepidopteran genetics.
 
 - GRIT require the use of a multitude of data in order to correctly identify scaffolds which may require breaking, joining or even removing depending on a variety of features such as: coverage changes, telomeric sequence, and strength of HiC signal. All of these impact the quality of the final genomic assembly.
-	-  iyTipFemo1 HiC map changes
+	-  [[Work-based Projects/Curation of iyTipFemo1]]
+	- [[Work-based Projects/Curation of idCriBerb1]]
 
 	This data is also entered into Jira, for ingestion into other data-driven projects, such as [[GRIT-realtime]]. This takes the curation data and collates it into a form usable for management decisions and publications.
 

@@ -1,7 +1,7 @@
 ---
 title: TreeVal
 date: 50@16-12-2022
-tags: ["TDB", "workbased", "portfolio"]
+tags: ["TDB", "workbased", "Portfolio"]
 type: ["Pipeline", "Software Development"]
 ---
 

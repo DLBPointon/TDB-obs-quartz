@@ -1,7 +1,14 @@
-The Traumatic Media DataBase is a project I started in 2021 in order to provide a simple way to search for media which may have a scenes that could be considered traumatic. 
+---
+project: TMDB
+date_started: NA
+status: Needs more Research and Dev Time
+tags: ["TDB", "personal"]
+type: ["Software", "Dockerisation", "Learning", "Networking", "Databasing"]
+---
 
-This was inspired through seeing the effects of Birth Trauma on multiple woman I personally know and, through my wife, the effect that the trope of suprise traumatic birth scenes in popular media 
-can have.
+Description:: The Traumatic Media DataBase is a project I started in 2021 in order to provide a simple way to search for media which may have a scenes that could be considered traumatic. 
+
+This was inspired through seeing the effects of Birth Trauma on multiple woman I personally know and, through my wife, the effect that the trope of suprise traumatic birth scenes in popular media can have.
 
 My plan for this project is to make a robust full stack project and then "give" it to the Birth Trauma Association to aid in raising awareness. This project has also been built with other traumatic events in mind and can be expanding on when needed.
 
@@ -12,6 +19,7 @@ My plan for this project is to make a robust full stack project and then "give" 
 | Technology | Docs | Implimented | Description | 
 |--|--|--|--|
 | Angular |  |  | Single Page Application |
+| React | | | Should i change to React as it is much more popular? |
 | PostgreSQL |  |  | The backend database |
 | PostgREST |  |  | A database - API layer |
 
@@ -37,7 +45,7 @@ I think the database just needs redesigning, it isn't as optimal as it could be.
 
 I could self-host the application on [[PiStack]], but will there be an issue with scaling as I will be taking this to the Birth Trauma Association, are 4 Pi's enough? 
 
-Security, how would I secure a self-hosted app like this? Is the domain provider able to secure this?
+Security, how would I secure a self-hosted app like this? Is the domain provider able to secure this? Nginx Reverse Proxy is able to do much of this, will ISP allow?
 
 #### Fix
 Much more reading, talk to some people who know much more in this topic.

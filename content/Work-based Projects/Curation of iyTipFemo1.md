@@ -81,6 +81,8 @@ Figure 5: A Nucmer plot of the pre-curation iyTipFemo1 assembly against the _Oru
 
 The process of manually curating a genome is iterative, relying on evidence (such as the contact maps or syntenic alignments such as those produced with Nucmer, see figure 5) and can sometimes feel like playing Soduko. In any place you may need to make multiple moves and changes based on a educated guesses and these changes may be genuine or may need completely reverting.
 
+As curation is not my typical role, this project was conducted in order to learn the whole process of assembly through the curation, this required a degree of time management whilst understanding that the curation had to be performed in a reasonable amount in order to keep the pipelines flowing. Due to this as well as time constraints with a curation colleuge, it was decided that Tuesdays and Thursdays would be "in contact" days where we would talk about changes needed and about potential exploratory work.
+
 ### Future Plans
 I plan on furthering my skills in genomic curation by taking on more tickets in GRIT. Allowing my to get a greater grasp of the shear complexity of genomes through the Hymenopteran genomes as well as the how this compares across the three of life.
 

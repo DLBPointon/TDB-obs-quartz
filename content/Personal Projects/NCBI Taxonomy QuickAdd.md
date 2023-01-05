@@ -1,3 +1,13 @@
+---
+project: NCBI Taxonomy QuickAdd
+date_started: NA
+status: Completed
+tags: ["TDB", "personal"]
+type: ["Software"]
+---
+
+Description:: An Obsidian Plugin for NCBI taxonomy data.
+
 Built whilst I was getting to documenting the organsisms I was working on in DTOL this little project allowed me to get to: know the Obsidian environment a bit better, improve my skills in JavaScript and create a local database on the bugs I like (bees and wasps).
 
 #### GitHub
