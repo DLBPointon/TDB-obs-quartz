@@ -23,7 +23,7 @@ The aims of the DTOL project include the production of reference quality genomes
 
 This portfolio peice will focus on the curation attempt of [_Criorhina berberina_](https://www.ncbi.nlm.nih.gov/data-hub/taxonomy/2663927), known internally as idCriBerb1 or commonly as the Dimorphic Bearfly, a bumblebee mimic, see Figure 1.
 
-![[/images/idcriberb1.png]]
+![idcriberb](/images/idcriberb1.png)
 
 ![[/content/idcriberb1.png]]
 
