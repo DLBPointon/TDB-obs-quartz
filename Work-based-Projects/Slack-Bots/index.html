@@ -1,0 +1,143 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=description content="GitHub:: BTK-announcer, Weekly-reporter, Priority-reporter
+Contribution:: Whole Project
+Working with:: JMDW
+Topic:: Software Development, CI-CD
+KSBs:: B1
+ Description:: Description of the slack bots developed to better inform GRIT and GEVAL-builders"><title>Slack Bots</title><meta name=viewport content="width=device-width,initial-scale=1"><link rel="shortcut icon" type=image/png href=https://dlbpointon.github.io/TDB-obs-quartz//icon.png><link href=https://dlbpointon.github.io/TDB-obs-quartz/styles.706bb6073ba85d26809f9096dae23a6b.min.css rel=stylesheet><link href=https://dlbpointon.github.io/TDB-obs-quartz/styles/_light_syntax.86a48a52faebeaaf42158b72922b1c90.min.css rel=stylesheet id=theme-link><script src=https://dlbpointon.github.io/TDB-obs-quartz/js/darkmode.cfcd25279560061512e85b624dd83073.min.js></script>
+<script src=https://dlbpointon.github.io/TDB-obs-quartz/js/util.5e39932758f9ecaf45fd54506ed61416.min.js></script>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css integrity=sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js integrity=sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx crossorigin=anonymous></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js integrity=sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR crossorigin=anonymous></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/copy-tex.min.js integrity=sha384-ww/583aHhxWkz5DEVn6OKtNiIaLi2iBRNZXfJRiY1Ai7tnJ9UXpEsyvOITVpTl4A crossorigin=anonymous></script>
+<script src=https://unpkg.com/@floating-ui/core@0.7.3></script>
+<script src=https://unpkg.com/@floating-ui/dom@0.5.4></script>
+<script src=https://dlbpointon.github.io/TDB-obs-quartz/js/popover.6da9b273c092cc16fc1aa904d71a2163.min.js></script>
+<script src=https://dlbpointon.github.io/TDB-obs-quartz/js/code-title.b35124ad8db0ba37162b886afb711cbc.min.js></script>
+<script src=https://dlbpointon.github.io/TDB-obs-quartz/js/clipboard.c20857734e53a3fb733b7443879efa61.min.js></script>
+<script src=https://dlbpointon.github.io/TDB-obs-quartz/js/callouts.7723cac461d613d118ee8bb8216b9838.min.js></script>
+<script>const SEARCH_ENABLED=!1,LATEX_ENABLED=!0,PRODUCTION=!0,BASE_URL="https://dlbpointon.github.io/TDB-obs-quartz/",fetchData=Promise.all([fetch("https://dlbpointon.github.io/TDB-obs-quartz/indices/linkIndex.43525d156f7c2dfb16a0273a95d808be.min.json").then(e=>e.json()).then(e=>({index:e.index,links:e.links})),fetch("https://dlbpointon.github.io/TDB-obs-quartz/indices/contentIndex.689e28a3cb0f20ddc8585479d286f6ac.min.json").then(e=>e.json())]).then(([{index:e,links:t},n])=>({index:e,links:t,content:n})),render=()=>{const e=new URL(BASE_URL),t=e.pathname,n=window.location.pathname,s=t==n;addCopyButtons(),addTitleToCodeBlocks(),addCollapsibleCallouts(),initPopover("https://dlbpointon.github.io/TDB-obs-quartz",!0);const o=document.getElementById("footer");if(o){const e=document.getElementById("graph-container");if(!e)return requestAnimationFrame(render);e.textContent="";const t=s&&!1;drawGraph("https://dlbpointon.github.io/TDB-obs-quartz",t,[{"/moc":"#4388cc"}],t?{centerForce:1,depth:-1,enableDrag:!0,enableLegend:!1,enableZoom:!0,fontSize:.5,linkDistance:1,opacityScale:3,repelForce:1,scale:1.4}:{centerForce:1,depth:1,enableDrag:!0,enableLegend:!1,enableZoom:!0,fontSize:.6,linkDistance:1,opacityScale:3,repelForce:2,scale:1.2})}var i=document.getElementsByClassName("mermaid");i.length>0&&import("https://unpkg.com/mermaid@9/dist/mermaid.esm.min.mjs").then(e=>{e.default.init()})},init=(e=document)=>{addCopyButtons(),addTitleToCodeBlocks(),renderMathInElement(e.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1}],macros:{'’':"'"},throwOnError:!1})}</script><script type=module>
+    import { attachSPARouting } from "https:\/\/dlbpointon.github.io\/TDB-obs-quartz\/js\/router.9d4974281069e9ebb189f642ae1e3ca2.min.js"
+    attachSPARouting(init, render)
+  </script></head><body><div id=search-container><div id=search-space><input autocomplete=off id=search-bar name=search type=text aria-label=Search placeholder="Search for something..."><div id=results-container></div></div></div><script src=https://cdn.jsdelivr.net/npm/flexsearch@0.7.21/dist/flexsearch.bundle.js integrity="sha256-i3A0NZGkhsKjVMzFxv3ksk0DZh3aXqu0l49Bbh0MdjE=" crossorigin=anonymous defer></script>
+<script defer src=https://dlbpointon.github.io/TDB-obs-quartz/js/full-text-search.51f0b1753e9b30839d053f8a98cc20d1.min.js></script><div class=singlePage><header><h1 id=page-title><a href=https://dlbpointon.github.io/TDB-obs-quartz/>The Dyslexic Bioinformatician</a></h1><div class=spacer></div><div id=search-icon><p>Search</p><svg tabindex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search Icon</title><desc id="desc">Icon to open search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"/><circle cx="8" cy="8" r="7"/></g></svg></div><div class=darkmode><input class=toggle id=darkmode-toggle type=checkbox tabindex=-1>
+<label id=toggle-label-light for=darkmode-toggle tabindex=-1><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="dayIcon" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35"><title>Light Mode</title><path d="M6 17.5C6 16.672 5.328 16 4.5 16h-3C.672 16 0 16.672.0 17.5S.672 19 1.5 19h3C5.328 19 6 18.328 6 17.5zM7.5 26c-.414.0-.789.168-1.061.439l-2 2C4.168 28.711 4 29.086 4 29.5 4 30.328 4.671 31 5.5 31c.414.0.789-.168 1.06-.44l2-2C8.832 28.289 9 27.914 9 27.5 9 26.672 8.329 26 7.5 26zm10-20C18.329 6 19 5.328 19 4.5v-3C19 .672 18.329.0 17.5.0S16 .672 16 1.5v3C16 5.328 16.671 6 17.5 6zm10 3c.414.0.789-.168 1.06-.439l2-2C30.832 6.289 31 5.914 31 5.5 31 4.672 30.329 4 29.5 4c-.414.0-.789.168-1.061.44l-2 2C26.168 6.711 26 7.086 26 7.5 26 8.328 26.671 9 27.5 9zM6.439 8.561C6.711 8.832 7.086 9 7.5 9 8.328 9 9 8.328 9 7.5c0-.414-.168-.789-.439-1.061l-2-2C6.289 4.168 5.914 4 5.5 4 4.672 4 4 4.672 4 5.5c0 .414.168.789.439 1.06l2 2.001zM33.5 16h-3c-.828.0-1.5.672-1.5 1.5s.672 1.5 1.5 1.5h3c.828.0 1.5-.672 1.5-1.5S34.328 16 33.5 16zM28.561 26.439C28.289 26.168 27.914 26 27.5 26c-.828.0-1.5.672-1.5 1.5.0.414.168.789.439 1.06l2 2C28.711 30.832 29.086 31 29.5 31c.828.0 1.5-.672 1.5-1.5.0-.414-.168-.789-.439-1.061l-2-2zM17.5 29c-.829.0-1.5.672-1.5 1.5v3c0 .828.671 1.5 1.5 1.5s1.5-.672 1.5-1.5v-3C19 29.672 18.329 29 17.5 29zm0-22C11.71 7 7 11.71 7 17.5S11.71 28 17.5 28 28 23.29 28 17.5 23.29 7 17.5 7zm0 18c-4.136.0-7.5-3.364-7.5-7.5s3.364-7.5 7.5-7.5 7.5 3.364 7.5 7.5S21.636 25 17.5 25z"/></svg></label><label id=toggle-label-dark for=darkmode-toggle tabindex=-1><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="nightIcon" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'"><title>Dark Mode</title><path d="M96.76 66.458c-.853-.852-2.15-1.064-3.23-.534-6.063 2.991-12.858 4.571-19.655 4.571C62.022 70.495 50.88 65.88 42.5 57.5 29.043 44.043 25.658 23.536 34.076 6.47c.532-1.08.318-2.379-.534-3.23-.851-.852-2.15-1.064-3.23-.534-4.918 2.427-9.375 5.619-13.246 9.491-9.447 9.447-14.65 22.008-14.65 35.369.0 13.36 5.203 25.921 14.65 35.368s22.008 14.65 35.368 14.65c13.361.0 25.921-5.203 35.369-14.65 3.872-3.871 7.064-8.328 9.491-13.246C97.826 68.608 97.611 67.309 96.76 66.458z"/></svg></label></div></header><article><h1>Slack Bots</h1><p class=meta>Last updated
+Jan 5, 2023
+<a href=https://github.com/DLBPointon/TDB-obs-quartz/Work-based%20Projects/Slack%20Bots.md rel=noopener>Edit Source</a></p><ul class=tags><li><a href=https://dlbpointon.github.io/TDB-obs-quartz/tags/TDB/>Tdb</a></li><li><a href=https://dlbpointon.github.io/TDB-obs-quartz/tags/workbased/>Workbased</a></li><li><a href=https://dlbpointon.github.io/TDB-obs-quartz/tags/portfolio/>Portfolio</a></li></ul><aside class=mainTOC><details><summary>Table of Contents</summary><nav id=TableOfContents><ol><li><ol><li><a href=#the-project>The Project</a></li><li><a href=#future-plans>Future Plans</a></li><li><a href=#evidence>Evidence</a></li></ol></li></ol></nav></details></aside><p>GitHub::
+<a href=https://github.com/DLBPointon/btk_announcer rel=noopener>BTK-announcer</a>,
+<a href=https://github.com/DLBPointon/weekly-report rel=noopener>Weekly-reporter</a>,
+<a href=https://github.com/DLBPointon/priority_report rel=noopener>Priority-reporter</a></p><p>Contribution:: Whole Project</p><p>Working with:: JMDW</p><p>Topic:: Software Development, CI-CD</p><p>KSBs:: B1</p><hr><p>Description:: Description of the slack bots developed to better inform GRIT and GEVAL-builders</p><a href=#the-project><h3 id=the-project><span class=hanchor arialabel=Anchor># </span>The Project</h3></a><p>These three scripts were developed by a need for a simpler method of viewing important data from the sanger JIRA instance. These are automatically run on the internal GitLab repositories (the above github links are mirrors) via a gitlab-ci.yaml and using GitLab Secrets to pass JIRA credentials, see code block 1.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>stages:
+</span></span><span class=line><span class=cl> - first
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>variables:
+</span></span><span class=line><span class=cl>    JIRA_PASS: $JIRA_PASS
+</span></span><span class=line><span class=cl>    JIRA_USER: $JIRA_USER
+</span></span><span class=line><span class=cl>    TEST_HOOK: $SLACK_TEST
+</span></span><span class=line><span class=cl>    PROD_HOOK: $SLACK_HOOK
+</span></span><span class=line><span class=cl>    JIRA_INST: $JIRA_INST
+</span></span><span class=line><span class=cl>    FLAG: $flag
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>before_script:
+</span></span><span class=line><span class=cl>    - echo $PATH
+</span></span><span class=line><span class=cl>    - apt-get update -qq &amp;&amp; apt-get install -y python3.9 &amp;&amp; apt-get install -y python3-pip
+</span></span><span class=line><span class=cl>    - python3 -v
+</span></span><span class=line><span class=cl>    - pip3 install jira
+</span></span><span class=line><span class=cl>    - pip3 install datetime
+</span></span><span class=line><span class=cl>    - pip3 install python-dotenv
+</span></span><span class=line><span class=cl>    - pip3 install tabulate
+</span></span><span class=line><span class=cl>    - pip3 install requests
+</span></span><span class=line><span class=cl>    - pip3 install pandas
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>mrbtk:
+</span></span><span class=line><span class=cl>  stage: first
+</span></span><span class=line><span class=cl>  tags:
+</span></span><span class=line><span class=cl>   - autoscale
+</span></span><span class=line><span class=cl>  script:
+</span></span><span class=line><span class=cl>    - python3 MrBTK.py $flag
+</span></span><span class=line><span class=cl>  retry: 2
+</span></span></code></pre></td></tr></table></div></div><p>Code Block 1: The .gitlab-ci.yaml file used to run the GitLab pipeline at 9:00am. The variables denoted in the variables block (top to bottom) are: JIRA Password, JIRA Username, Slack webhook for private channel testing, Slack webhook for public channel posting, JIRA instance to scrape data from and a flag to specify whether the script posts to the private or public channel. This structure is used for all three bots. MrBTK is the BTK-anncouncer.</p><a href=#mrbtk><h5 id=mrbtk><span class=hanchor arialabel=Anchor># </span>MrBTK</h5></a><p>MrBTK is the Slack name for a bot that reads all JIRA tickets that are tagged <code>BlobToolKit</code> (BTK). This returns a dictionary with the ticket id of every ticket that has not made it through to the penultimate steps of curation. Subsequent steps then parse whether certain keywords are found in the comments, whether there is a colleuge assigned to the ticket, the workflow the ticket is in as well as the stage at which the BTK has been assigned. All of these values populate a dictionary which is parsed by the modules <code>pandas</code> and <code>tabulator</code> to generate a &ldquo;pretty&rdquo; dataframe that can be sent via the <code>requests</code> module to the slack channel, see figure 1.</p><p><a class="internal-link broken">mrbtk.png</a>
+Figure 1: A MrBTK slack post detailing the tickets that require a BTK being run, those being run and its assignee as well as those that have been completed and are waiting on post-BTK analysis.</p><p>BTK is a pipeline used in the identification of potential contamination. Based on the
+<a href=https://github.com/blobtoolkit/blobtoolkit rel=noopener>BlobToolKit2</a> pipeline created by Richard Challis, the Sanger based implementation allows for a standarised and quick setup per genomic assembly. This speed is important, especially as DTOL scaled up to dozens of assebmlies per week, it was necessary to see what needed working on at a glance ranther than logging into JIRA and creating a query for this information.</p><a href=#weekly-report><h5 id=weekly-report><span class=hanchor arialabel=Anchor># </span>Weekly-report</h5></a><p>Also known as Miss Minutes, as it keeps an eye on the ins and outs of curation, the weekly reporting script was creating after a request by GRIT manager JMDW to enable a form of reporting of the weekly happenings in GRIT.</p><p>This bot generates a rather verbose output, see figure 2, detailing tickets new and old, as well as their status, date of status change, project as well as counts of tickets in the same projects. Due to the size of the output I have not as of yet updated it to use tabulator, shown in figure 1.</p><p><a class="internal-link broken">missminutes.png</a>
+Figure 2: A Miss Minutes slack post detailing the changes made to tickets over the previous week. Darwin is the main DTOL project, VGP and VGP+ are Vertebrate Genome Projects types and ASG is the Aquatic Symbiosis Genomics project.</p><a href=#priority-report><h5 id=priority-report><span class=hanchor arialabel=Anchor># </span>Priority-report</h5></a><p>Priority-report, also known as Rover, was developed to simply fetch all high-priority tickets due to a number of them &ldquo;falling through the net&rdquo; and spending a large amount of time waiting to be assigned.</p><p>This results in a large amount of output much like Weekly-report, however due to the lack of segregration by project type it is possible to use <code>pandas</code> and <code>tabulator</code> to split the output in 15 entry chunks via a small code block that took advantage of splicing, see code block 2.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>counter = 0
+</span></span><span class=line><span class=cl>n = 15
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>for start in range(0, len(df), n):
+</span></span><span class=line><span class=cl>    counter += 1
+</span></span><span class=line><span class=cl>    prettier_df = tabulate_df(df[start:start+n])
+</span></span><span class=line><span class=cl>    post_it(prettier_df, slack_add, counter)
+</span></span></code></pre></td></tr></table></div></div><p>Code block 2: A small function which uses splicing to split a large dataframe into 15 entry long segments and post them to slack numbered by the counter variable + 1, to result in <strong>Report 1</strong> rather than <strong>Report 0</strong>. The functions, tabulate_df and post_it, converts the pandas dataframe into a tabulate dataframe and posts the resulting tabulate dataframe to slack respectively.</p><p>This results in output that details the assembly id, ticket id, priority level, status and assignee (if any) attached to the ticket, see figure 3.</p><p><a class="internal-link broken">rover.png</a>
+<a class="internal-link broken">rover2.png</a>
+Figure 4: An example of a slack report produced by Rover.</p><a href=#future-plans><h3 id=future-plans><span class=hanchor arialabel=Anchor># </span>Future Plans</h3></a><p>Future plans include updating the weekly-reporting output in a format that is much cleaner such as that generated by BTK-announcer in figure 1. This will require a significant amount of refactoring that will result in at least one slack post per project type, more if there is more than 15 enteries per post due to limitations on the slack webhook API.</p><a href=#evidence><h3 id=evidence><span class=hanchor arialabel=Anchor># </span>Evidence</h3></a><a href=#conversation-in-setting-up-priority-report-and-weekly-report><h5 id=conversation-in-setting-up-priority-report-and-weekly-report><span class=hanchor arialabel=Anchor># </span>Conversation in setting up priority-report and weekly-report</h5></a><p><strong>JMDW</strong>
+Mr_BTK&mldr;.. can we do one for priority curations?</p><p><strong>DLBP</strong>
+Yeah sure, Just in general high priority cases that come in? Where would you like it posted?I&rsquo;m also most of the way through one for the weekly reporting too, It has everything for what has been updated in the specified week. Also can have everything currently in Open and in Submission, but just by the sheer nature of Jira those can&rsquo;t be filtered by date otherwise you get some anomalies like we&rsquo;ve seen before where they will disappear and reappear almost at will.</p><p><strong>JMDW</strong>
+ok thanks for manageing to pull everything!regarding the priority.. normal stuff tracks through at medium. would be good to get reports on High and Highest when in the system&mldr; track through Open, Decon, build and curation, post process, in submission.</p><p>Can you report who assigned to also?</p><p><strong>DLBP</strong>
+No problem, do you want it sent to a new channel or directly to you?</p><p><strong>JMDW</strong>
+can probably get pushed to the curation channel.<br>Need people to see what is needing to be picked up quickly and if things are stuck at stages</p><p>Can you send the output here or to me to see before putting it in the channel</p><p><strong>DLBP</strong>
+added an integration to this channel: Rover</p><p>Hi Jo, the priority bot is ready to go live now. I can set it to default send a message to you and then you curl a command to get it to run for the curators if thats helpful?</p><p><strong>JMDW</strong>
+ok great! thanks</p><p><strong>Rover</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>|-------- Rovers Priority Report for 2021-08-17 --------|  
+</span></span><span class=line><span class=cl>|========================================|  
+</span></span><span class=line><span class=cl>| RC-68      | Highest | Decontamination | James Torrance |  
+</span></span><span class=line><span class=cl>| GRIT-469 | Highest | Decontamination | James Torrance |  
+</span></span><span class=line><span class=cl>| GRIT-468 | Highest | Decontamination | James Torrance |  
+</span></span><span class=line><span class=cl>| GRIT-464 | High       | Decontamination | James Torrance |  
+</span></span><span class=line><span class=cl>| GRIT-463 | High       | Decontamination | James Torrance |  
+</span></span><span class=line><span class=cl>| GRIT-447 | High       | Decontamination | James Torrance |  
+</span></span><span class=line><span class=cl>| GRIT-446 | High       | Decontamination | James Torrance ||========================================|  
+</span></span><span class=line><span class=cl>|--------------- END Report for 2021-08-17 -------------|
+</span></span></code></pre></td></tr></table></div></div><p><strong>DLBP</strong>
+Rover is set to go off at 9 and the curl command to send it off to the curators chat is:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>curl -X POST \
+</span></span><span class=line><span class=cl>     -F token= {REMOVED} \
+</span></span><span class=line><span class=cl>     -F ref=main \
+</span></span><span class=line><span class=cl>     -F &#34;variables[TOCURATORS]=CUR&#34; \
+</span></span><span class=line><span class=cl>	 [https://gitlab.internal.sanger.ac.uk/-{REMOVED}
+</span></span></code></pre></td></tr></table></div></div><p>The TOCURATORS variable can be set to JMDW, DLBP or CUR if you need it re-running or anything</p><p>There is also a reports channel for the weekly report, it spits out everything in the pipe at the minute + OPEN tickets which are status open and FIN which are submitted.It makes a pretty ugly and lengthy output which is why i&rsquo;ve put it in its own channel</p><p><strong>JMDW</strong>
+Nice thanks</p></article><hr><div class=page-end id=footer><div class=backlinks-container><h3>Backlinks</h3><ul class=backlinks><li><a href=/TDB-obs-quartz/Computer-Science/University-and-CS-Homepage/ data-ctx="Slack Bots" data-src=/Computer-Science/University-and-CS-Homepage class=internal-link></a></li></ul></div><div><script src=https://cdn.jsdelivr.net/npm/d3@6.7.0/dist/d3.min.js integrity="sha256-+7jaYCp29O1JusNWHaYtgUn6EhuP0VaFuswhNV06MyI=" crossorigin=anonymous></script><h3>Interactive Graph</h3><div id=graph-container></div><style>:root{--g-node:var(--secondary);--g-node-active:var(--primary);--g-node-inactive:var(--visited);--g-link:var(--outlinegray);--g-link-active:#5a7282}</style><script src=https://dlbpointon.github.io/TDB-obs-quartz/js/graph.abd4bc2af3869a96524d7d23b76152c7.js></script></div></div><div id=contact_buttons><footer><p>Made by Damon-Lee Pointon using <a href=https://github.com/jackyzha0/quartz>Quartz</a>, © 2023</p><ul><li><a href=https://dlbpointon.github.io/TDB-obs-quartz/>Home</a></li><li><a href=https://twitter.com/DLBPointon>Twitter</a></li><li><a href=https://github.com/DLBPointon>Github</a></li></ul></footer></div></div></body></html>
