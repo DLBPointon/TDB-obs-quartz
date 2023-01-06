@@ -84,7 +84,7 @@ Future plans include improving skills in curation and running more of the assemb
 idCriBerb.  
 You have two misjoins in PRTXT_2 and PRTXT_3. You have connected arms of different chrms together, q1-q2 and p1-p2
 
-See Figure 3.
+See Figure 3. 
 
 Some small cent sequence contigs probably can be placed but not really a problem.
 
