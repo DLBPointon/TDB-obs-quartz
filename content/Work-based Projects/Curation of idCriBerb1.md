@@ -24,27 +24,26 @@ The aims of the DTOL project include the production of reference quality genomes
 This portfolio peice will focus on the curation attempt of [_Criorhina berberina_](https://www.ncbi.nlm.nih.gov/data-hub/taxonomy/2663927), known internally as idCriBerb1 or commonly as the Dimorphic Bearfly, a bumblebee mimic, see Figure 1.
 
 ![idcriberb](/content/images/idcriberb1.png)
-
 Figure 1: An image of _Criorhina berberina_, taken by Martin Anderson (2011).
 
 ### My Contribution
 Genome curation is very much like working with a very complex puzzle, except each piece is a puzzle unto itself. This is best visualised with the Pretext map visualised in PretextView2 (Figure 2). Each square is currently a scaffold and the goal is to assign each to a chromosome using off-diagonal signals (which infer association, depending on the brightness of the colour), coverage, HiGlass (a higher resolution HiC data visualiser, which does not allow editing of the map) and gEVAL analysis (which includes alignments to closely related organisms, telomeric signals, gaps and more). Using this data, and along with help from a seasoned curator in GRIT, I was able to produce around 1 curation Pretext Map, this is a separate map to the pre-curation Pretext map with changes. After consulting with a second member of the curation team, there were some large scale structural errors I had missed whilst correcting the smaller ones, see Figure 3. This required me to go back to the pre-curation map to make the additional changes which were evidenced with gap information from gEVAL (this gives evidence for making a break).
 
-![[images/idCriBerb-precuration.png]]
+![precuration](/content/images/idCriBerb-precuration.png)
 Figure 2: The pre-curation pretext map, each square is a scaffold and the diagonal line is a linearised 2d representation of HiC data which when used with other data such as coverage graphs (shown as the line plot at the bottom of the figure) can be used to create a chromosome level genomic assembly.
 
-![[images/idCriBerb-curationfixes.png]]
+![curationfixes](/content/images/idCriBerb-curationfixes.png)
 Figure 3: The end result of round 1 of curation, where all “obvious” changes have been made (e.g. regions of high association have been moved into their “natural” location). The above figure has also been annotated by a second curator  (JMDW), to show large scale issues with this draft curation Blue shows locations where breaks should be introduced, hinted at by the long curved signal off the diagonal (which I mistook for a centromeric signal). Green points towards two scaffolds which need to be swapped around and yellow covering a region that requires “flipping” as it is currently inverted. The colour scheme has been changed from Figure 2 to increase the contrast and allow better visualisations of the association signals.
 
-![[images/idCriBerb-postcuration.png]]
+![postcuration](/content/images/idCriBerb-postcuration.png)
 Figure 4: The fully curated assembly, the pink, red, green and blue are chromosomes 1, 2, 3 and X respectively. The white circles show centrosomal sequences, those circles off the diagonal show areas of high association (where the sequences are similar) and are reflected on the opposite side of the figure. The white line is evidence that these signals are all in line with each other, further evidencing they are repeats, their location in the chromosomes shows they are centromeric rather than telomeric (which are absent in dipterans).
 
 In order to generate a final pretext map, the map to be saved as evidence, the pretext instance showing with the map from Figure 4 must be “dumped”. Dumping the TPF (Tile Path Format) allows for comparison between the edited genome and that in the gEVAL database (which will be pre-curation). This allows for a FASTA file to be generated which represents, what we believe to be, the fully curated genome which will go on to become the reference genome of this species, as will be the case for the majority of organisms passing through the Darwin Tree of Life Program. Using GRIT-realtime, we can view the changes made to this genome in Table 1. This shows how the removal of various types of sequence such as; haplotypic duplications, contaminants and false duplications affects the statistics of the genome. Removed sequence, in this case, was primarily haplotypic duplication which made up the smallest 22 scaffolds that sit to the right of the sex (labelled blue) chromosome in Figure 4, these have been zoomed in Figure 5.
 
-![[images/idCriBerb-haplotypicduplication.png]]
+![haplotypicdupe](/content/images/idCriBerb-haplotypicduplication.png)
 Figure 5: A figure to better show the haplotypic duplication of the Criorhina berberina. The blue underlined chromosome is the expected X chromosome also shown in Figure 4. Boxed in white is the 22 scaffolds of haplotypic duplication, which can be seen to have some limited association with the sex chromosome.
 
-![[images/idCriBerb-grit-realtime.png]]
+![realtime](/content/images/idCriBerb-grit-realtime.png)
 Figure 6: A graph taken from [[Portfolio Pieces/GRIT-realtime]] which shows how the curation of _Criorhina berberina_, shown here as idChiBerb1, compares to other dipterans that have been curated. The Y-axis is the number of Manual interventions per GB of genome (including breaks and joins of sequence).
 
 | Category | Value |
