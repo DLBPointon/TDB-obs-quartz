@@ -1,3 +1,5 @@
+I'm shutting down the GitHub pages for this for now, due to some configuration settings that break upon upload. I'll wait for Quartz to be updated before setting this back up.
+
 # Quartz
 
 Host your second brain and [digital garden](https://jzhao.xyz/posts/networked-thought) for free. Quartz features
